@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    body{
+      background-color: black;
+    }
+     #border{
+          background-color: black;
+         border-top-left-radius:50px;
+         border-radius: 50px;
+         
+     }
+    .cell{
+       border-top-left-radius:100px;
+      width:300px;
+      height:300px;
+    }
+    #row1{
+      
+      display: flex;
+      justify-content:center;
+      
+    }
+    #row2{
+      display: flex;
+      justify-content:center;
+    }
+    #img1{
+       border-top-left-radius:100px;
+    } 
+    
+    #img2{
+       border-top-right-radius:100px;
+    } 
+    
+    #img3{
+       border-bottom-left-radius:100px;
+    } 
+    
+    #img4{
+       border-bottom-right-radius:100px;
+    }
+    p{
+       font-family: "Brush Script MT", cursive;
+       font-size: 20px;
+      display: block;
+      color: white;
+      text-align: center;
+    }
+    h1{
+        font-family: "Brush Script MT", cursive;
+       font-size: 60px;
+       display: block;
+      color: yellow;
+      text-align: center;
+       
+    }
+    hr { 
+      display: block;
+      border-style: inset;
+      border-width: 1px;
+    }
+    img:hover{
+        transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+    <h1>The Seasons</h1>
+    <div id=border>    
+      <div id="row1">
+        <div class="cell">
+          <a href="https://www.thespruce.com/spring-holidays-4127597">
+            <img id= "img1" src="img/spring.png" width="300" height="250" alt ="Spring" >
+          </a>
+          <p>Spring</p>
+      </div>
+        <div class="cell">
+          <a href="https://www.huffpost.com/entry/31-fun-free-things-to-do_b_7811856">
+            <img id= "img2" src="img/summer.png" width="300" height="250" alt ="Summer">
+          </a>
+           <p>Summer</p>
+        </div>
+      </div>
+       <hr align="center" width="80%">
+      <div id="row2">
+        <div class="cell">
+          <a href="https://www.tripstodiscover.com/best-pumpkin-patch-to-visit-this-fall/">
+            <img id= "img3" src="img/fall.png" width="300" height="250" alt ="Fall">
+          </a>
+          <p>Autumn</p>
+        </div>
+        <div class="cell">
+          <a href="https://www.airfarewatchdog.com/blog/44249972/the-14-most-relaxing-winter-resorts-in-the-united-states/">
+            <img id= "img4" src="img/winter.jpg" width="300" height="250" alt ="Winter">
+          </a>
+          <p>Winter</p>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
