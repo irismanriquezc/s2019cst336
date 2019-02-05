@@ -17,7 +17,6 @@ in html
         
         <link href="css/styles.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-        
     </head>
 <!-- closing head -->
 
@@ -30,34 +29,44 @@ in html
          
         <nav>
             <hr width= 50%/>
-            <a class="active" href ="index.html">Home</a>
-            <a  href = "about.html">About</a>
+            <a  href ="index.html">Home</a>
+            <a class="active2" href = "about.html">About</a>
             <a  href = "contact.html">Contact</a>
         </nav>
         
         <br /> <br />
         
-        <main>
+        <div id="content">
+            <table>
+                
+                <tr id="table-header">
+                    <td><strong>Programming Language</strong></td>
+                    <td><strong>Years Experience</strong></td>
+                </tr>
+                
+                <tr class ="table-row">
+                    <td>Java</td>
+                    <td> 1</td>
+                </tr>
+                
+                 <tr class ="table-row">
+                    <td>C++</td>
+                    <td> 2</td>
+                </tr>
+                 
+                 <tr class ="table-row">
+                    <td>Python</td>
+                    <td> 2</td>
+                </tr>
+                
+            </table>
             
-            <figure id="me">
-                <img src="img/IrisMCcopy.png" alt= "Photograph of Iris"/>
-            </figure>
-            
-            <div id="welcomeText" align=left>
-                Hello! <br />
-                
-                <p>Thank you for vising my professional portfolio website.</p>
-                
-                <p>I am a Software Engineer and soon an intern</p>
-                
-                <p>Feel free to contact me!</p>
-                
-                <br /><br />
-                
-                <em>"Belive you <strong>can</strong> and you're halfway there</em><br />
-                 - Theodore Roosevelt
-            </div>
-        </main>
+            <ul>
+                <li><span class="hobby">Photography</span>: I enjoy to take pictures, of nature mostly, on my free time.</li>
+                <li><span class="hobby">Painting</span>: I love to paint, it helps me to relieve stress.</li>
+                <li><span class="hobby"> Music</span>: I always listen to music, whether it is to concentrate, drive or just for fun</li>
+            </ul>
+        </div>
         <!-- This is the footer -->
         <!-- The footer goes inside the body but not always -->
         <footer>
