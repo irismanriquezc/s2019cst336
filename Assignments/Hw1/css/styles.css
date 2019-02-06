@@ -7,7 +7,14 @@ nav,footer{
     text-align: center;
 }
 
+footer{
+    background-image: url("comp.png");
+   background-image: linear-gradient(#8cd2d8, #b0d88c, #d6d88c);
+    
+}
+
 #head{
+     background-image: linear-gradient(#d6d88c, #b0d88c, #8cd2d8);
     font-family: 'Permanent Marker', cursive;
     -webkit-animation: fadein 3s;
     text-align: center;
@@ -40,30 +47,73 @@ nav a:hover{
     transition:.6s;
     
 }
+nav a:hover:not(.active) {
+  background-color:#c6dcff;
+  background-clip: content-box;
+}
 
-section,article{
+
+section{
       font-family: 'Open Sans Condensed', sans-serif;
       padding-right: 315px;
       right: 5px;
       bottom:10px;
 }
+article{
+      font-family: 'VT323', monospace;
+      padding-right: 315px;
+      right: 5px;
+      bottom:10px;
+}
+
+.wr{
+  font-family: 'Open Sans Condensed', sans-serif;
+  display: flex;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid transparent; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 10; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3s steps(40, end),
+    blink-caret .75s;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  1000000% { border-color: transparent }
+}
 
 aside{
    
     position: absolute;
-    top:150px;
+    top:200px;
     padding-left: 500px;
 }
 
 aside img{
     width: 300px;
-    height: 170px;
+    height: 150px;
     border: 1px black dashed;
 }
 
 .func{
     text-decoration: underline;
     font-weight: bold;
+}
+
+
+.main{
+    font-family: 'Abel', sans-serif;
+    font-weight: bold;
+    font-size:1.4em;
 }
 
 .active{
