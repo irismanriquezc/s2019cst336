@@ -1,0 +1,42 @@
+body {
+    background-color:#ede487;
+    color:black;
+}
+nav,footer{
+    text-align: center;
+}
+#head{
+    text-align: center;
+    font-size: 60px;
+}
+
+nav a{
+    
+    padding:15px;
+    padding-bottom: 4px;
+    font-size: 1.8em;
+    text-decoration:none;
+    color:black;
+}
+section{
+      padding-right: 315px;
+      right: 5px;
+      bottom:10px;
+}
+aside{
+   
+    position: absolute;
+    top:200px;
+    padding-left: 500px;
+}
+aside img{
+ 
+     
+     /*z-index: -1;*/
+    width: 300px;
+    height: 170px;
+}
+.func{
+    text-decoration: underline;
+    font-weight: bold;
+}

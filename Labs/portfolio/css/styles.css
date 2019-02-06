@@ -19,21 +19,7 @@ nav a{
     text-decoration:none;
     color:white;
 }
-nav a:hover:not(.active) {
-  background-color:#7a632a;
-}
- .active {
-  background-color:#33723d;
 
-}
-.active2 {
-  background-color:#33723d;
-
-}
-.active3 {
-  background-color:#33723d;
-
-}
 nav a:hover{
     border-bottom: 2px orange solid;
     font-size:2em;
@@ -75,6 +61,22 @@ ul{
     text-align: left;
     padding-left: 200px;
 }
+nav a:hover:not(.active) {
+  background-color:#7a632a;
+}
 .hobby{
     color:yellow;
+}
+
+ .active {
+  background-color:#33723d;
+
+}
+.active2 {
+  background-color:#33723d;
+
+}
+.active3 {
+  background-color:#33723d;
+
 }
