@@ -55,13 +55,13 @@ nav a:hover:not(.active) {
 
 section{
       font-family: 'Open Sans Condensed', sans-serif;
-      padding-right: 315px;
+      padding-right: 400px;
       right: 5px;
       bottom:10px;
 }
 article{
       font-family: 'VT323', monospace;
-      padding-right: 315px;
+      padding-right: 400px;
       right: 5px;
       bottom:10px;
 }
@@ -95,7 +95,7 @@ aside{
    
     position: absolute;
     top:200px;
-    left:500px;
+    padding-left:1100px;
 }
 
 aside img{
