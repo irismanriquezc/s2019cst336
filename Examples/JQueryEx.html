@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+    </head>
+    <body>
+    
+        <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  
+  <h2> Weekdays: </h2>
+  <h3> Monday </h3>
+  <h3> Tuesday </h3>
+  <h2> Weekend: </h2>
+  <h3> Saturday </h3>
+  <h3> Sunday </h3>
+ 
+ <div id="box" style="width:100px; height:100px; background:red; position:absolute;">
+</div>
+ 
+  
+  <script>
+//   $("document").ready ( function() {
+//       $("h2").css("color","red");
+//       $("h3:first").html("Today is Monday");
+//   })
+ 
+  $('document').ready( function () {
+
+	$('h2').click ( function() { 
+		 $(this).css("border","solid 2px");
+              });
+    
+      $('#box').click ( function() { 
+                
+            var cssLeft = $('#box').css("left");
+                
+             $('#box').animate({ left:'250px' });
+                 
+             setTimeout(function(){
+                 $('#box').animate({ left:cssLeft });
+             }, 2000);
+         });
+
+});
+
+ </script>
+ 
+
+
+
+
+
+
+    </body>
+</html>
