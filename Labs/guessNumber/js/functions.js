@@ -31,7 +31,7 @@
                     $('#lastResult').html("That number is not valid!");
                     guessCount--;
                     guesses.innerHTML+=userGuess+ ' ';
-                    lastResult.style.backgroundColor='black';
+                    lastResult.style.backgroundColor= "white";
                 }
                 else{
 
