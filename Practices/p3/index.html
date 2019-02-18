@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Slot Machine</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
+    <body>
+        <div id="content">
+            <div id="heading" style="background-color:#E9ECEF;">
+                <h1 style="text-align:center;"> Slot Machine </h1>
+            </div>
+            
+            <button type="button" id="play" onclick="buttonClick()" style= "background-color: #2FA54A; display: block; color:white; font-size:13pt; margin:auto; width: 120px;">Play!</button>
+            <div id="slot" style="display:flex">
+                
+                <img id="image1" width="30%" src="img/seven.png"/>
+                <img id="image2" width="30%" src="img/seven.png"/>
+                <img id="image3" width="30%" src="img/seven.png"/>
+                
+            </div>
+            
+            <div id="message" ></div>
+                <h2 id="result" style="text-align:center;"></h2>
+                <h3 id="won"  style= "text-align:center;">You won $0</h3>
+                <p id="total_winning" style="text-align:center;">Total Winnings $0</p>
+                
+            </div>
+        </div>
+        
+        <script>
+        
+            document.getElementById("content").style.fontFamily = "Arial, Helvetica, sans-serif";
+            //document.getElementsById("content").style.margin = "auto";
+            
+            let imageArray= ["cherry","grapes","seven"];
+            let randomIndex= Math.floor(Math.random()*3);
+            let randomImage= imageArray[randomIndex];
+            let randomImage1= imageArray[randomIndex];
+            let randomImage2= imageArray[randomIndex];
+                      
+            var img1 = document.querySelector("#image1");
+            var img2 = document.querySelector("#image2");
+            var img3 = document.querySelector("#image3");
+
+            var earnings=0;
+
+            
+            function buttonClick(){
+
+                randomIndex= Math.floor(Math.random()*3);
+                randomImage= imageArray[randomIndex];
+
+                randomIndex= Math.floor(Math.random()*3);
+                randomImage1= imageArray[randomIndex];
+                
+                randomIndex= Math.floor(Math.random()*3);
+                randomImage2= imageArray[randomIndex];
+
+                
+                img1.setAttribute("src", ("img/"+ randomImage+".png"));
+                img2.setAttribute("src", ("img/"+ randomImage1+".png"));
+                img3.setAttribute("src", ("img/"+ randomImage2+".png"));
+                
+                if(randomImage ==="seven" && randomImage1==="seven" &&randomImage2==="seven"){
+                    
+                    earnings += 500;
+                    document.getElementById("result").innerHTML="JACKPOT!";
+                    var audio = document.createElement("audio");
+                    audio.src = "audio/jackpot.m4a";
+                    audio.play();
+                    
+                     document.getElementById("won").innerHTML = "You won $500";
+                }
+                
+                else if(randomImage === "cherry" && randomImage1==="cherry" &&randomImage2==="cherry"){
+                    document.getElementById("result").innerHTML="";
+                    document.getElementById("won").innerHTML = "You won $300";
+                    earnings += 300;
+                    
+                }
+                else if(randomImage === "grapes" && randomImage1==="grapes" &&randomImage2==="grapes"){
+                    document.getElementById("result").innerHTML="";
+                    document.getElementById("won").innerHTML = "You won $100";
+                    earnings += 100;
+                    
+                }
+                else{
+                    document.getElementById("result").innerHTML="";
+                    document.getElementById("won").innerHTML = "You won $0";
+                }
+                document.getElementById("total_winning").innerHTML= "Total Winnings $"+earnings;
+                
+            }
+           
+            
+          
+           
+            
+        </script>
+        
+    </body>
+</html>
