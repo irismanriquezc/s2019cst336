@@ -1,0 +1,74 @@
+body{
+    background-color:#ffbd87;
+    text-align:center;
+}
+
+h4{
+    font-family: 'Monoton', cursive;
+    font-size: 3.4em;
+    text-align:center;
+
+}
+
+
+#fullform{
+    
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 2.3em;
+    text-align:center;
+
+}
+#textboxid
+{
+    height:35px;
+    font-size:16pt;
+    margin-top:20px;
+}
+
+#selection{
+    font-size: .5em;
+
+}
+
+#self{
+    font-size: 1.5em;
+}
+
+#colors{
+    font-size:.7em;
+}
+
+.corners { 
+  background: #ffbd87;
+  height: 1300px;
+  margin: 50px auto;
+  max-width: 1200px;
+  position: relative;
+  width: 80%;
+  box-shadow: 0 1px 7px hsla(0, 0%, 0%, 0.2);
+}
+
+
+.corners:after, .corners:before {
+  background: #e6e6e6;
+  content: '';
+  opacity: 0.8;
+  height: 50px;
+  position: absolute;
+  top: -25px;
+  width: 100px;
+  
+}
+.corners:after {
+  left: -50px;
+  transform: rotate(-45deg);
+}
+.corners:before {
+  right: -50px;
+  transform: rotate(45deg);
+}
+
+.images{
+    display:flex;
+
+}

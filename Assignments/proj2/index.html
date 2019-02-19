@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--Create a web page with at least six HTML Form elements and a button or image. -->
+<!--Upon submission of the form, i.e. clicking the button or image, the data must be "processed" and new data should be displayed.-->
+<html>
+    <head>
+        <title>Project 2</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+        
+    </head>
+    <body class= "corners">
+        
+        <h4>Get To Know You</h4>
+      <hr>
+       
+        
+        <div id="fullform">
+        
+        <form>
+            
+            First name:
+             <input  id= "textboxid" type="text" value=""><br>
+            Last name: 
+             <input id= "textboxid" type="text" value=""><br>
+         
+        
+        <br>
+        <!--(text, checkbox, radio, select, number, submit, etc.)-->
+        
+            Enter your age:
+            <input id= "textboxid" type="text" value=""><br>
+               
+
+        <div id="selection">
+           
+            <h2>Favorite type of Ice cream?</h2>
+            <select name="Ice Cream">
+            <option value="default" selected>Choose one</option>
+            <option value="vanilla">Vanilla</option>
+            <option value="straw">Strawberry</option>
+            <option value="choco">Chocolate</option>
+            <option value="other">Other</option>
+            </select>
+           
+            
+     
+        
+           <br><br>
+              <h1 id="self">Tell me about yourself.</h1> 
+            <textarea name="message" rows="10" cols="30">...</textarea>
+       
+            <br><br>
+        
+        
+            <h2 id= "pets">What type of pets do you like?</h2>
+            
+            <label for="cats">Cats</label>
+            <input type="checkbox" id= "cats" name="animal1" value="Cats"><br>
+
+            <label for="dogs">Dogs</label>
+            <input type="checkbox" id= "dogs" name="animal2" value="Dogs"><br>
+
+            <label for="birds">Birds</label>
+            <input type="checkbox" id= "birds" name="animal3" value="Birds"> <br>
+           
+            <label for="fish">Fishes</label>
+            <input type="checkbox" id = "fish" name="animal4" value="Fish"><br>
+
+            
+            <input type="button" value="Surprise Me" onclick="animalPic();">
+            </div>
+            <br>
+             <div id="side" class= "images"></div>
+            <br>
+        
+        
+       
+          <h3 id="colors">Select your favorite color:</h3>
+          <input type="color" name="favcolor" value="#eff0f2" onchange="changeB(this.value)">
+          
+          <br><br>
+          
+        <input type="submit" value="Submit" onclick="changeB();">
+        </form>
+        
+        </div>
+        
+        <script>
+            function changeB(value){
+                
+               $('body').css('background-color',value);
+               
+               
+            } 
+           
+            
+            function animalPic(){
+                
+                
+                var x = document.getElementById("cats").checked;
+                var y = document.getElementById("dogs").checked;
+                var w =document.getElementById("fish").checked;
+                var z= document.getElementById("birds").checked;
+                
+                
+                
+                if(x){
+                var tx = document.createElement("IMG");
+                tx.setAttribute("src", "img/cat.jpeg");
+                tx.setAttribute("width", "304");
+                tx.setAttribute("height", "228");
+                document.getElementById("side").appendChild(tx);     // Append <li> to <ul> with id="myList"
+
+
+                }
+                
+                if(y){
+                var mx = document.createElement("IMG");
+    
+                mx.setAttribute("src", "img/dog.jpg");
+                mx.setAttribute("width", "304");
+                mx.setAttribute("height", "228");
+                
+                document.getElementById("side").appendChild(mx);                
+                }
+                
+                if(w){
+                var px = document.createElement("IMG");
+                px.setAttribute("src", "img/fishies.jpg");
+                px.setAttribute("width", "304");
+                px.setAttribute("height", "228");
+                document.getElementById("side").appendChild(px);                
+                
+                }
+                
+                if(z){
+                var lx = document.createElement("IMG");
+                lx.setAttribute("src", "img/birds.jpg");
+                lx.setAttribute("width", "304");
+                lx.setAttribute("height", "228");
+                document.getElementById("side").appendChild(lx);                
+                
+                }
+                
+                $('body').css('height',1500);
+                
+            }
+            
+        </script>
+        
+    </body>
+</html>
