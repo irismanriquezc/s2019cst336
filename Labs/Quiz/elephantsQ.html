@@ -3,107 +3,124 @@
     <head>
         <title> Know Your Elephants</title>
         
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript"  src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+
     </head>
-    <body>
-        <h1> Do you know these irrelephant facts?</h1>
+    
+    <body >
         
+        <h1 id="heading"> DO YOU KNOW THESE IRRELEPHANT FACTS?</h1>
         
-        <div id="congrats"></div>
+        <div id="pics">
+            <img src="elephant.jpg" height="300" width="400"></img>
+        </div>
+        <div id ="scoreBox" style="position:absolute; left:1000px; top:700px;" > 
+        
+            <h1 id="congrats" class="animated infinite tada delay-1s"></h1></div>
         <form>
             <h2> What is the current elephant population in the world? <img id="image1" width="20" height="20" src="check.png" style="display:none"/> </h2>
             
-            <input type="radio" name="population" value="wrong" > 130 Mill.<br>
-            <input type="radio" name="population" value="wrong"> 320 Mill.<br>
-            <input type="radio" name="population" value="wrong"> 420 Mill.<br>
-            <input id= "answer1" type="radio" name="population" value="correct1" > 550 Mill.<br>
+            <input   type="radio" name="population" value="wrong" > 130 Mill.<br>
+            <input   type="radio" name="population" value="wrong"> 320 Mill.<br>
+            <input   type="radio" name="population" value="wrong"> 420 Mill.<br>
+            <input   id= "answer1" type="radio" name="population" value="correct1" > 550 Mill.<br>
          </form>
          
          <form>
             <h2> How much does a newborn elephant weigh? <img id="image2" width="20" height="20" src="check.png" style="display:none"/> </h2>
-            <input id= "answer2" type="radio" name="weigh" value="correct2" > 250 lbs<br>
-            <input type="radio" name="weigh" value="wrong">150 lbs<br>
-            <input type="radio" name="weigh" value="wrong"> 75 lbs<br>
-            <input type="radio" name="weigh" value="wrong" > 321 lbs<br>
+            <input   id= "answer2" type="radio" name="weigh" value="correct2" > 250 lbs<br>
+            <input   type="radio" name="weigh" value="wrong">150 lbs<br>
+            <input   type="radio" name="weigh" value="wrong"> 75 lbs<br>
+            <input   type="radio" name="weigh" value="wrong" > 321 lbs<br>
         </form>
             
         <form>
             <h2> How long are elephants pregnant for?  <img id="image3" width="20" height="20" src="check.png" style="display:none"/></h2>
-            <input type="radio" name="pregnant" value="wrong" > 14 months<br>
-            <input type="radio" name="pregnant" value="wrong"> 9 months<br>
-            <input type="radio" name="pregnant" value="wrong"> 3 months<br>
-            <input id= "answer3" type="radio" name="pregnant" value="correct3" > 22 months <br>
+            <input   type="radio" name="pregnant" value="wrong" > 14 months<br>
+            <input   type="radio" name="pregnant" value="wrong"> 9 months<br>
+            <input   type="radio" name="pregnant" value="wrong"> 3 months<br>
+            <input   id= "answer3" type="radio" name="pregnant" value="correct3" > 22 months <br>
         </form>
             
         <form>
             <h2> What is the name of the famous elephant killed in 1994 in Hawaii? <img id="image4" width="20" height="20" src="check.png" style="display:none"/></h2>
-            <input type="radio" name="famous" value="wrong" > Spunky<br>
-            <input id= "answer4" type="radio" name="famous" value="correct4"> Tyke <br>
-            <input type="radio" name="famous" value="wrong"> Kyro <br>
-            <input type="radio" name="famous" value="wrong" > Milo <br>
+            <input   type="radio" name="famous" value="wrong" > Spunky<br>
+            <input   id= "answer4" type="radio" name="famous" value="correct4"> Tyke <br>
+            <input   type="radio" name="famous" value="wrong"> Kyro <br>
+            <input   type="radio" name="famous" value="wrong" > Milo <br>
         </form>
         
         <form>
             <h2> What is the average length of an elephant's trunk? <img id="image5" width="20" height="20" src="check.png" style="display:none"/> </h2>
-            <input type="radio" name="trunk" value="wrong" >3 ft.<br>
-            <input type="radio" name="trunk" value="wrong"> 10ft.<br>
-            <input type="radio" name="trunk" value="wrong"> 8ft.<br>
-            <input id= "answer5" type="radio" name="trunk" value="correct5" > 6 ft.<br>
+            <input   type="radio" name="trunk" value="wrong" >3 ft.<br>
+            <input   type="radio" name="trunk" value="wrong"> 10ft.<br>
+            <input   type="radio" name="trunk" value="wrong"> 8ft.<br>
+            <input   id= "answer5" type="radio" name="trunk" value="correct5" > 6 ft.<br>
         <form>
             
         <form>
             <h2> How many distinct types of elephants are there? <img id="image6" width="20" height="20" src="check.png" style="display:none"/></h2>
            
-            <input type="radio" name="types" value="wrong" > 4 <br>
-            <input type="radio" name="types" value="wrong"> 9<br>
-            <input id= "answer6" type="radio" name="types" value="correct6"> 2<br>
-            <input type="radio" name="types" value="wrong" > 15 <br>
+            <input   type="radio" name="types" value="wrong" > 4 <br>
+            <input   type="radio" name="types" value="wrong"> 9<br>
+            <input   id= "answer6" type="radio" name="types" value="correct6"> 2<br>
+            <input   type="radio" name="types" value="wrong" > 15 <br>
 
         </form>
         
         <form>
             <h2> The ears of African elephants resemble what? <img id="image7" width="20" height="20" src="check.png" style="display:none"/></h2>
            
-            <input type="radio" name="types" value="wrong" > A cloud <br>
-            <input type="radio" name="types" value="wrong"> A blotch of paint<br>
-            <input id= "answer7" type="radio" name="types" value="correct7"> Africa<br>
-            <input type="radio" name="types" value="wrong" > A bonzai tree <br>
+            <input   type="radio" name="types" value="wrong" > A cloud <br>
+            <input   type="radio" name="types" value="wrong"> A blotch of paint<br>
+            <input   id= "answer7" type="radio" name="types" value="correct7"> Africa<br>
+            <input   type="radio" name="types" value="wrong" > A bonzai tree <br>
 
         </form>
         
         <form>
             <h2>Where do most elephants live? <img id="image8" width="20" height="20" src="check.png" style="display:none"/></h2>
            
-            <input type="radio" name="types" value="wrong" > The zoo <br>
-            <input type="radio" name="types" value="wrong"> Asia<br>
-            <input id= "answer8" type="radio" name="types" value="correct8"> Africa<br>
-            <input type="radio" name="types" value="wrong" > South America <br>
+            <input   type="radio" name="types" value="wrong" > The zoo <br>
+            <input   type="radio" name="types" value="wrong"> Asia<br>
+            <input   id= "answer8" type="radio" name="types" value="correct8"> Africa<br>
+            <input   type="radio" name="types" value="wrong" > South America <br>
 
         </form>
         
         <form>
             <h2> Why do elephants have long trunks? <img id="image9" width="20" height="20" src="check.png" style="display:none"/></h2>
            
-            <input type="radio" name="types" value="wrong" >For fun <br>
-            <input type="radio" name="types" value="wrong"> To reach tall things<br>
-            <input id= "answer9" type="radio" name="types" value="correct9"> To not move their head trying to obtain something <br>
-            <input type="radio" name="types" value="wrong" > Long trunks were a mistake <br>
+            <input   type="radio" name="types" value="wrong" > For fun <br>
+            <input   type="radio" name="types" value="wrong"> To reach tall things<br>
+            <input   id= "answer9" type="radio" name="types" value="correct9"> To not move their head trying to obtain something <br>
+            <input   type="radio" name="types" value="wrong" > Long trunks were a mistake <br>
 
         </form>
         
         <form>
             <h2> What is an elephants favorite food? <img id="image10" width="20" height="20" src="check.png" style="display:none"/></h2>
            
-            <input type="radio" name="eat" value="wrong" > Fruit <br>
-            <input type="radio" name="eat" value="wrong"> Grass<br>
-            <input id= "answer10" type="radio" name="eat" value="correct10"> Tree bark<br>
-            <input type="radio" name="eat" value="wrong" >Leaves <br>
-
+            <input   type="radio" name="eat" value="wrong" > Fruit <br>
+            <input   type="radio" name="eat" value="wrong"> Grass<br>
+            <input   id= "answer10" type="radio" name="eat" value="correct10"> Tree bark<br>
+            <input   type="radio" name="eat" value="wrong" > Leaves <br>
+            <br>
+            
+         <input id = "button1" type="button" value="Submit Quiz">
+           <input id="button2" type="submit" value="Reset Quiz">
         </form>
         
         <br>
-         <input type="submit" value="Submit Quiz" onclick="validate()">
-         
+        
+
          
          <script>
             
@@ -119,9 +136,11 @@
             var q10 = document.querySelector("#image10");
             
             var totalR=0;
-           
-             function validate(){
-                  
+      
+           $(document).ready(function() {
+                
+                 $('#button1').on('click',function() {
+                
                 if(document.getElementById("answer1").checked){
                     
                     q1.setAttribute("style", "display:inline;");
@@ -223,24 +242,39 @@
                 
                
                 if(document.getElementById("answer10").checked){
+                   q10.setAttribute("style", "display:inline;");
                     
-                    q10.setAttribute("style", "display:inline;");
+
                     totalR+=1;
                 }
                 else{
-                    
+                   
                     q10.setAttribute("style", "display:inline;");
                     q10.setAttribute("src","xMark.png"); 
                 }
-                document.getElementById("congrats").innerHTML= "Score: "+ totalR*10 +"%"
-               if(totalR>=9){
-                   document.getElementById("congrats").innerHTML= "You got a grat score!";
+                
+                document.getElementById("congrats").innerHTML= "Score: "+ totalR*10 +"%";
+                if(totalR<=5){
+                    document.getElementById("congrats").innerHTML+=" You seem to not know your elephants! ";
+                }
+               if(totalR>5&&totalR<9){
+                    document.getElementById("congrats").innerHTML+=" Seems you have some understanding about elephants";
                }
-             }
-             
+              if(totalR>=9){
+                    document.body.style.backgroundImage = "url('sprinkles.png')";
+                    document.getElementById("congrats").innerHTML= "Score: "+ totalR*10 +"% <br />";
+                    
+                  document.getElementById("congrats").innerHTML += "You got a great score!";
+              }
+                 });
+            });
+            
+           
          
             
              
          </script>
+        
     </body>
+    
 </html>

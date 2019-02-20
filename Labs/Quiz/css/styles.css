@@ -1,0 +1,55 @@
+body{
+    background-color: #a0d4f7;
+
+}
+#congrats{
+    text-align: left;
+}
+
+
+#pics{
+    text-align: center;
+    
+}
+
+#heading{
+    font-family: 'Caveat Brush', cursive;
+    text-align: center;
+    font-size: 3.6em;
+}
+
+h2{
+    font-family: 'Cabin Sketch', cursive;
+
+}
+
+#button1{
+    height: 30px;
+    background-color:#e2315e;
+    position:absolute;
+    left:1100px; 
+    top:900px;
+    
+    
+}
+ #button2{
+    height: 30px;
+    background-color:#e2315e;
+    position:absolute;
+    left:1200px; 
+    top:900px;
+ }
+#scoreBox{
+    background-color: #deafff;
+    padding: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    background-clip: content-box;
+
+}
+#congrats{
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 25;
+}
