@@ -10,10 +10,11 @@
         <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
         
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     </head>
     <body class= "corners">
         
-        <h4>Get To Know You</h4>
+        <h4 class="animated infinite bounce delay-2s">Get To Know You</h4>
       <hr>
        
         
@@ -36,8 +37,8 @@
 
         <div id="selection">
            
-            <h2>Favorite type of Ice cream?</h2>
-            <select name="Ice Cream">
+            <h2 id="iceC" class="animated infinite heartBeat delay-2s">Favorite type of Ice cream?</h2>
+            <select  name="Ice Cream">
             <option value="default" selected>Choose one</option>
             <option value="vanilla">Vanilla</option>
             <option value="straw">Strawberry</option>
@@ -55,7 +56,7 @@
             <br><br>
         
         
-            <h2 id= "pets">What type of pets do you like?</h2>
+            <h2 id= "pets" class="animated infinite jackInTheBox delay-2s" >What type of pets do you like?</h2>
             
             <label for="cats">Cats</label>
             <input type="checkbox" id= "cats" name="animal1" value="Cats"><br>
@@ -68,17 +69,28 @@
            
             <label for="fish">Fishes</label>
             <input type="checkbox" id = "fish" name="animal4" value="Fish"><br>
-
+    
+            
             
             <input type="button" value="Surprise Me" onclick="animalPic();">
+            
+            
+            
             </div>
             <br>
-             <div id="side" class= "images"></div>
+             <div id="side" class= "images">
+                 
+                <img id="image1" width="304" height="228" src="img/cat.jpeg" style="display:none"/>
+                <img id="image2" width="304" height="228" src="img/dog.jpg" style="display:none"/>
+                <img id="image3" width="304" height="228" src="img/fishies.jpg" style="display:none"/>
+                <img id="image4" width="304" height="228" src="img/birds.jpg" style="display:none"/>
+               
+             </div>
             <br>
         
         
        
-          <h3 id="colors">Select your favorite color:</h3>
+          <h3 id="colors" class="animated infinite rubberBand delay-2s">Select your favorite color:</h3>
           <input type="color" name="favcolor" value="#eff0f2" onchange="changeB(this.value)">
           
           <br><br>
@@ -96,6 +108,10 @@
                
             } 
            
+            var tx = document.querySelector("#image1");
+            var mx = document.querySelector("#image2");
+            var px = document.querySelector("#image3");
+            var lx = document.querySelector("#image4");
             
             function animalPic(){
                 
@@ -106,41 +122,36 @@
                 var z= document.getElementById("birds").checked;
                 
                 
+               
                 
                 if(x){
-                var tx = document.createElement("IMG");
-                tx.setAttribute("src", "img/cat.jpeg");
-                tx.setAttribute("width", "304");
-                tx.setAttribute("height", "228");
-                document.getElementById("side").appendChild(tx);     // Append <li> to <ul> with id="myList"
+                
+                // var tx = document.createElement("IMG");
+                tx.setAttribute("style","display:inline;");
+               
+                document.getElementById("side").appendChild(tx); 
+                ;// Append <li> to <ul> with id="myList"
 
 
                 }
                 
                 if(y){
-                var mx = document.createElement("IMG");
-    
-                mx.setAttribute("src", "img/dog.jpg");
-                mx.setAttribute("width", "304");
-                mx.setAttribute("height", "228");
+                    
+                mx.setAttribute("style","display:inline;");
+             
+                mx.setAttribute("border", "thick solid #0000FF")
                 
                 document.getElementById("side").appendChild(mx);                
                 }
                 
                 if(w){
-                var px = document.createElement("IMG");
-                px.setAttribute("src", "img/fishies.jpg");
-                px.setAttribute("width", "304");
-                px.setAttribute("height", "228");
+                px.setAttribute("style","display:inline;");
                 document.getElementById("side").appendChild(px);                
                 
                 }
                 
                 if(z){
-                var lx = document.createElement("IMG");
-                lx.setAttribute("src", "img/birds.jpg");
-                lx.setAttribute("width", "304");
-                lx.setAttribute("height", "228");
+                lx.setAttribute("style","display:inline;");
                 document.getElementById("side").appendChild(lx);                
                 
                 }

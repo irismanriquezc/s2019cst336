@@ -7,8 +7,12 @@ h4{
     font-family: 'Monoton', cursive;
     font-size: 3.4em;
     text-align:center;
-
+   
+     animation-duration: 15s;
+     animation-delay: 2s;
 }
+
+
 
 
 #fullform{
@@ -72,3 +76,69 @@ h4{
     display:flex;
 
 }
+
+#image1{
+     animation: grain 8s steps(10) infinite;
+    margin-right:10px;   
+    border:dotted;
+    background-clip: content-box
+}
+
+#image2{
+     animation: grain 8s steps(10) infinite;
+    margin-right:10px;   
+    border:dashed;
+    background-clip: content-box
+}
+
+#image3{
+     animation: grain 8s steps(10) infinite;
+    margin-right:10px;   
+    border:dotted;
+    background-clip: content-box
+}
+
+#image4{
+    animation: grain 8s steps(10) infinite;
+    margin-right:10px;   
+    border:dashed;
+    background-clip: content-box
+    
+  
+}
+  @keyframes grain {
+  0%, 100% { transform:translate(0, 0) }
+  10% { transform:translate(-5%, -10%) }
+  20% { transform:translate(-15%, 5%) }
+  30% { transform:translate(7%, -25%) }
+  40% { transform:translate(-5%, 25%) }
+  50% { transform:translate(-15%, 10%) }
+  60% { transform:translate(15%, 0%) }
+  70% { transform:translate(0%, 15%) }
+  80% { transform:translate(3%, 35%) }
+  90% { transform:translate(-10%, 10%) }
+}
+
+
+h2{
+   
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+#pets{
+    animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 25;
+}
+
+#pets{
+    animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 25;
+}
+
+
+
+
