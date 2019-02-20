@@ -2,68 +2,244 @@
 <html>
     <head>
         <title> Know Your Elephants</title>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
     <body>
         <h1> Do you know these irrelephant facts?</h1>
+        
+        
+        <div id="congrats"></div>
         <form>
-            <h2> What is the current elephant population in the world? </h2>
-            <input type="radio" name="population" value="male" > 130 Mill.<br>
-            <input type="radio" name="population" value="female"> 320 Mill.<br>
-            <input type="radio" name="population" value="other"> 420 Mill.<br>
-            <input type="radio" name="population" value="male" > 550 Mill.<br>
+            <h2> What is the current elephant population in the world? <img id="image1" width="20" height="20" src="check.png" style="display:none"/> </h2>
+            
+            <input type="radio" name="population" value="wrong" > 130 Mill.<br>
+            <input type="radio" name="population" value="wrong"> 320 Mill.<br>
+            <input type="radio" name="population" value="wrong"> 420 Mill.<br>
+            <input id= "answer1" type="radio" name="population" value="correct1" > 550 Mill.<br>
          </form>
          
          <form>
-            <h2> How much does a newborn elephant weigh? </h2>
-            <input type="radio" name="weigh" value="male" > 250 lbs<br>
-            <input type="radio" name="weigh" value="female">150 lbs<br>
-            <input type="radio" name="weigh" value="other"> 75 lbs<br>
-            <input type="radio" name="weigh" value="male" > 321 lbs<br>
+            <h2> How much does a newborn elephant weigh? <img id="image2" width="20" height="20" src="check.png" style="display:none"/> </h2>
+            <input id= "answer2" type="radio" name="weigh" value="correct2" > 250 lbs<br>
+            <input type="radio" name="weigh" value="wrong">150 lbs<br>
+            <input type="radio" name="weigh" value="wrong"> 75 lbs<br>
+            <input type="radio" name="weigh" value="wrong" > 321 lbs<br>
         </form>
             
         <form>
-            <h2> How long are elephants pregnant for?  </h2>
-            <input type="radio" name="pregnant" value="male" > 14 months<br>
-            <input type="radio" name="pregnant" value="female"> 9 months<br>
-            <input type="radio" name="pregnant" value="other"> 3 months<br>
-            <input type="radio" name="pregnant" value="male" > 22 months <br>
+            <h2> How long are elephants pregnant for?  <img id="image3" width="20" height="20" src="check.png" style="display:none"/></h2>
+            <input type="radio" name="pregnant" value="wrong" > 14 months<br>
+            <input type="radio" name="pregnant" value="wrong"> 9 months<br>
+            <input type="radio" name="pregnant" value="wrong"> 3 months<br>
+            <input id= "answer3" type="radio" name="pregnant" value="correct3" > 22 months <br>
         </form>
             
         <form>
-            <h2> What is the name of the famous elephant killed in 1994 in Hawaii? </h2>
-            <input type="radio" name="famous" value="male" > Spunky<br>
-            <input type="radio" name="famous" value="female"> Tyke <br>
-            <input type="radio" name="famous" value="other"> Kyro <br>
-            <input type="radio" name="famous" value="male" > Milo <br>
+            <h2> What is the name of the famous elephant killed in 1994 in Hawaii? <img id="image4" width="20" height="20" src="check.png" style="display:none"/></h2>
+            <input type="radio" name="famous" value="wrong" > Spunky<br>
+            <input id= "answer4" type="radio" name="famous" value="correct4"> Tyke <br>
+            <input type="radio" name="famous" value="wrong"> Kyro <br>
+            <input type="radio" name="famous" value="wrong" > Milo <br>
         </form>
         
         <form>
-            <h2> What is the average length of an elephant's trunk? </h2>
-            <input type="radio" name="trunk" value="male" >3 ft.<br>
-            <input type="radio" name="trunk" value="female"> 10ft.<br>
-            <input type="radio" name="trunk" value="other"> 8ft.<br>
-            <input type="radio" name="trunk" value="male" > 6 ft.<br>
+            <h2> What is the average length of an elephant's trunk? <img id="image5" width="20" height="20" src="check.png" style="display:none"/> </h2>
+            <input type="radio" name="trunk" value="wrong" >3 ft.<br>
+            <input type="radio" name="trunk" value="wrong"> 10ft.<br>
+            <input type="radio" name="trunk" value="wrong"> 8ft.<br>
+            <input id= "answer5" type="radio" name="trunk" value="correct5" > 6 ft.<br>
         <form>
             
         <form>
-            <h2> How many distinct types of elephants are there? </h2>
-            <input type="radio" name="types" value="male" > 4 <br>
-            <input type="radio" name="types" value="female"> 9<br>
-            <input type="radio" name="types" value="other"> 2<br>
-            <input type="radio" name="types" value="male" > 15 <br>
+            <h2> How many distinct types of elephants are there? <img id="image6" width="20" height="20" src="check.png" style="display:none"/></h2>
+           
+            <input type="radio" name="types" value="wrong" > 4 <br>
+            <input type="radio" name="types" value="wrong"> 9<br>
+            <input id= "answer6" type="radio" name="types" value="correct6"> 2<br>
+            <input type="radio" name="types" value="wrong" > 15 <br>
 
         </form>
         
+        <form>
+            <h2> The ears of African elephants resemble what? <img id="image7" width="20" height="20" src="check.png" style="display:none"/></h2>
+           
+            <input type="radio" name="types" value="wrong" > A cloud <br>
+            <input type="radio" name="types" value="wrong"> A blotch of paint<br>
+            <input id= "answer7" type="radio" name="types" value="correct7"> Africa<br>
+            <input type="radio" name="types" value="wrong" > A bonzai tree <br>
+
+        </form>
         
-         <input type="submit" value="Submit" onclick="validate">
+        <form>
+            <h2>Where do most elephants live? <img id="image8" width="20" height="20" src="check.png" style="display:none"/></h2>
+           
+            <input type="radio" name="types" value="wrong" > The zoo <br>
+            <input type="radio" name="types" value="wrong"> Asia<br>
+            <input id= "answer8" type="radio" name="types" value="correct8"> Africa<br>
+            <input type="radio" name="types" value="wrong" > South America <br>
+
+        </form>
+        
+        <form>
+            <h2> Why do elephants have long trunks? <img id="image9" width="20" height="20" src="check.png" style="display:none"/></h2>
+           
+            <input type="radio" name="types" value="wrong" >For fun <br>
+            <input type="radio" name="types" value="wrong"> To reach tall things<br>
+            <input id= "answer9" type="radio" name="types" value="correct9"> To not move their head trying to obtain something <br>
+            <input type="radio" name="types" value="wrong" > Long trunks were a mistake <br>
+
+        </form>
+        
+        <form>
+            <h2> What is an elephants favorite food? <img id="image10" width="20" height="20" src="check.png" style="display:none"/></h2>
+           
+            <input type="radio" name="eat" value="wrong" > Fruit <br>
+            <input type="radio" name="eat" value="wrong"> Grass<br>
+            <input id= "answer10" type="radio" name="eat" value="correct10"> Tree bark<br>
+            <input type="radio" name="eat" value="wrong" >Leaves <br>
+
+        </form>
+        
+        <br>
+         <input type="submit" value="Submit Quiz" onclick="validate()">
          
          
          <script>
-             
+            
+            var q1 = document.querySelector("#image1");
+            var q2 = document.querySelector("#image2");
+            var q3 = document.querySelector("#image3");
+            var q4 = document.querySelector("#image4");
+            var q5 = document.querySelector("#image5");
+            var q6 = document.querySelector("#image6");
+            var q7 = document.querySelector("#image7");
+            var q8 = document.querySelector("#image8");
+            var q9 = document.querySelector("#image9");
+            var q10 = document.querySelector("#image10");
+            
+            var totalR=0;
+           
              function validate(){
-                 
+                  
+                if(document.getElementById("answer1").checked){
+                    
+                    q1.setAttribute("style", "display:inline;");
+                    totalR+=1;
+                }
+                else{
+                    
+                    q1.setAttribute("style", "display:inline;");
+                    q1.setAttribute("src","xMark.png");
+                }
+                
+                if(document.getElementById("answer2").checked){
+                    
+                    q2.setAttribute("style", "display:inline;");
+                    totalR+=1;
+                }
+                else{
+                    
+                    q2.setAttribute("style", "display:inline;");
+                    q2.setAttribute("src","xMark.png");
+                }
+                
+                if(document.getElementById("answer3").checked){
+                    
+                    q3.setAttribute("style", "display:inline;");
+                    totalR+=1;
+                }
+                else{
+                    
+                    q3.setAttribute("style", "display:inline;");
+                    q3.setAttribute("src","xMark.png");
+                }
+                
+                if(document.getElementById("answer4").checked){
+                    
+                    q4.setAttribute("style", "display:inline;");
+                    totalR+=1;
+                }
+                else{
+                    
+                    q4.setAttribute("style", "display:inline;");
+                    q4.setAttribute("src","xMark.png");
+                }
+                
+                if(document.getElementById("answer5").checked){
+                    
+                    q5.setAttribute("style", "display:inline;");
+                    totalR+=1;
+                }
+                else{
+                    
+                    q5.setAttribute("style", "display:inline;");
+                    q5.setAttribute("src","xMark.png");
+                }
+                
+                if(document.getElementById("answer6").checked){
+                    
+                    q6.setAttribute("style", "display:inline;");
+                    totalR+=1;
+                }
+                else{
+                    
+                    q6.setAttribute("style", "display:inline;");
+                    q6.setAttribute("src","xMark.png"); 
+                }
+                
+                if(document.getElementById("answer7").checked){
+                    
+                    q7.setAttribute("style", "display:inline;");
+                    totalR+=1;
+                }
+                else{
+                    
+                    q7.setAttribute("style", "display:inline;");
+                    q7.setAttribute("src","xMark.png"); 
+                }
+                
+                if(document.getElementById("answer8").checked){
+                    
+                    q8.setAttribute("style", "display:inline;");
+                    totalR+=1;
+                }
+                else{
+                    
+                    q8.setAttribute("style", "display:inline;");
+                    q8.setAttribute("src","xMark.png"); 
+                }
+                
+                if(document.getElementById("answer9").checked){
+                    
+                    q9.setAttribute("style", "display:inline;");
+                    totalR+=1;
+                }
+                else{
+                    
+                    q9.setAttribute("style", "display:inline;");
+                    q9.setAttribute("src","xMark.png"); 
+                }
+                
+               
+                if(document.getElementById("answer10").checked){
+                    
+                    q10.setAttribute("style", "display:inline;");
+                    totalR+=1;
+                }
+                else{
+                    
+                    q10.setAttribute("style", "display:inline;");
+                    q10.setAttribute("src","xMark.png"); 
+                }
+                document.getElementById("congrats").innerHTML= "Score: "+ totalR*10 +"%"
+               if(totalR>=9){
+                   document.getElementById("congrats").innerHTML= "You got a grat score!";
+               }
              }
              
+         
+            
              
          </script>
     </body>
