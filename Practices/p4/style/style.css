@@ -1,0 +1,17 @@
+body {
+    background-color: #c5d9f9;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: auto;
+}
+h1 {
+    color: grey;
+}
+table {
+    border-style: dotted;
+    margin: auto;
+}
+button {
+    color: white;
+    background-color: #555555;
+}
