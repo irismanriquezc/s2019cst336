@@ -1,129 +1,114 @@
 <html>
+
 <head>
 
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>AJAX: Sign Up Page</title>
-<script src="https://code.jquery.com/jquery.min.js"></script>
-<link href="css/styles.css" rel="stylesheet" type="text/css" />
-<link href="https://fonts.googleapis.com/css?family=Chonburi" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>AJAX: Sign Up Page</title>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Chonburi" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 
 
 </head>
 
 <body id="dummybodyid">
-  <h1> Sign Up Form </h1>
+    <h1> Sign Up Form </h1>
 
-  <form>
-    <fieldset>
-      <legend>Sign Up</legend>
-      <div><label>First Name: </label><input type="text"></div>
-      <div><label>Last Name: </label><input type="text"></div>
-      <div><label>Email :</label><input type="text"></div>
-      <div><label>Phone Number: </label><input type="text"></div>    
-          <div id="zip"><label>Zip Code: </label><input type="text" id="zip1"> <p id="found" style="display:none">Zip Code not found</p></div>
-      
-      <div id="city"><label>City: </label></div>
-      <div id="latitude"><label>Latitude: </label></div>
-      <div id="longitude"><label>Longitude :</label></div>
-      <div id="state"><label>State: </label><input id="state1" type="text"></div>
-      <div id="county"><label>Select a County: </label><select id="cSelect"></select></div>
-      <div id="username"><label>Desired Username: </label><input type="text"><p id="username1" style="display:none">Username available</p></div>
-      <div id="passw"><label>Password: </label><input id="pswd" type="password"></div>
-      <div id="passw1"><label>Type Password Again: </label><input id="pswd1" type="password"> <p id="passV" style="display:none"> Retype Password</p></div>
-      <div><input name="submitB" id="button" type="button" value="Sign up!" ></div>
-    </fieldset>
-  </form>
-  <script>
+    <form>
+        <fieldset>
+            <legend>Sign Up</legend>
+            <div><label>First Name: </label><input type="text"></div>
+            <div><label>Last Name: </label><input type="text"></div>
+            <div><label>Email :</label><input type="text"></div>
+            <div><label>Phone Number: </label><input type="text"></div>
+            <div id="zip"><label>Zip Code: </label><input type="text" id="zip1">
+                <p id="found" style="display:none">Zip Code not found</p>
+            </div>
 
-$("#button").click(function(){
-    var password= $("#pswd").val();
-    var confirm= $("#pswd1").val();
-    
-    console.log( $("#pswd").val());
-    console.log( $("#pswd1").val());
-    if(password==confirm){
-        console.log("same");
-        $('input[name="submitB"]').prop("type", "submit");
-        
-    }
-    else{
-        $("#passV").css("color", "red");
+            <div id="city"><label>City: </label></div>
+            <div id="latitude"><label>Latitude: </label></div>
+            <div id="longitude"><label>Longitude :</label></div>
+            <div id="state"><label>State: </label><input id="state1" type="text"></div>
+            <div id="county"><label>Select a County: </label><select id="cSelect"></select></div>
+            <div id="username"><label>Desired Username: </label><input class="username1" type="text">
+                <p class="username1" style="display:none">Username available</p>
+            </div>
+            <div id="passw"><label>Password: </label><input id="pswd" type="password"></div>
+            <div id="passw1"><label>Type Password Again: </label><input id="pswd1" type="password">
+                <p id="passV" style="display:none"> Retype Password</p>
+            </div>
+            <div><input name="submitB" id="button" type="button" value="Sign up!"></div>
+        </fieldset>
+    </form>
+    <script>
+        var usr_name = [];
+        $("#button").on("click", function(e) {
+            usr_name = push($(".username1").val());
+            var password = $("#pswd").val();
+            var confirm = $("#pswd1").val();
 
-        $("#passV").show();
-    }
-});
-// 0: "93955"
-// 1: "Seaside"
-// 2: "CA"
-// 3: "Monterey County"
-// 4: "831"
-// 5: "37"
-// 6: "-122"
-// areaCode: "831"
-// city: "Seaside"
-// county: "Monterey County"
-// latitude: "37"
-// longitude: "-122"
-// state: "CA"
-// zip: "93955"
-
-     $("#zip").on('input', function(e){
-
-         $.ajax({
-          type: "get",
-          url: "http://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php?zip=93955",
-          dataType: "json",
-          success: function() {
-             
-
-            console.log(arguments);
-             var data = arguments[0];
-                $("#found").hide();
-            if($("#zip1").val()==data[0]){
-                $("#found").hide();
-                $("#city").append(" "+data[1]);
-                $("#latitude").append(" "+data[5]);
-                $("#longitude").append(" "+data[6]);
+            console.log($("#pswd").val());
+            console.log($("#pswd1").val());
+            if (password != confirm) {
+                $('input[name="submitB"]').prop("type", "submit");
+            } else {
+                $("#passV").css("color", "red");
+                $("#passV").show();
             }
-            else{
-                $("#found").show();
-            }
-          }
-     })
-    
-     });
-     
-      $("#state").on('input', function(m){
-        
-                 $.ajax({
-                  type: "get",
-                  url: "http://itcdland.csumb.edu/~milara/ajax/countyList.php?state=ca#",
-                  dataType: "json",
-                  success: function() {
-                      var states= $("#state1").val().toUpperCase();
-                    if(states=="CA"){
-                        for ( var i = 0; i < 58; i++) { 
-                            console.log(arguments[0][i]["county"]);
-                            var o = new Option(arguments[0][i]["county"], "value");
-                            $(o).html(arguments[0][i]["county"]);
-                            $("#cSelect").append(o);
-                            }
+        });
+            $("#zip").on('input', function(e) {
+
+                $.ajax({
+                    type: "get",
+                    url: "http://itcdland.csumb.edu/~milara/ajax/cityInfoByZip.php?zip=93955",
+                    dataType: "json",
+                    success: function() {
+                        console.log(arguments);
+                        var data = arguments[0];
+                        $("#found").hide();
+                        if ($("#zip1").val() == data[0]) {
+                            $("#found").hide();
+                            $("#city").append(" " + data[1]);
+                            $("#latitude").append(" " + data[5]);
+                            $("#longitude").append(" " + data[6]);
+                        }
+                        else {
+                            $("#found").show();
+                        }
                     }
-                    
-              }
-             })
-        });
-     
-        $("#username").on('input', function(m){
-            $("#username1").css("color", "green");
-             $("#username1").show();
-        });
-             
-             
-  </script>
+                })
+
+            });
+
+            $("#state").on('input', function(m) {
+
+                $.ajax({
+                    type: "get",
+                    url: "http://itcdland.csumb.edu/~milara/ajax/countyList.php?state=ca#",
+                    dataType: "json",
+                    success: function() {
+                        var states = $("#state1").val().toUpperCase();
+                        if (states == "CA") {
+                            for (var i = 0; i < 58; i++) {
+                                console.log(arguments[0][i]["county"]);
+                                var o = new Option(arguments[0][i]["county"], "value");
+                                $(o).html(arguments[0][i]["county"]);
+                                $("#cSelect").append(o);
+                            }
+                        }
+
+                    }
+                })
+            });
+
+            $("#username").on('input', function(m) {
+                $("#username1").css("color", "green");
+                $("#username1").show();
+            });
+    </script>
 </body>
 
 </html>
