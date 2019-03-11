@@ -1,0 +1,181 @@
+<html>
+
+<head>
+    <title>Shopping Cart</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+
+<body>
+    <h1> Discount Shopping! </h1>
+
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Unit Price</th>
+            <th> Quantity </th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td id="itemName"></td>
+            <td id="itemPrice"></td>
+            <td><input type="text" id="itemQty" size="5"></td>
+            <td id="totalPrice"></td>
+        </tr>
+
+
+
+
+        <tr>
+            <td>Discount</td>
+            <td></td>
+            <td id="discountPerct"></td>
+            <td id="discount"></td>
+        </tr>
+
+        <tr>
+            <td>Subtotal</td>
+            <td></td>
+            <td></td>
+            <td id="subtotal"></td>
+        </tr>
+
+        <tr>
+            <td>Tax (10%)</td>
+            <td></td>
+            <td></td>
+            <td id="tax"></td>
+        </tr>
+
+        <tr>
+            <td>Total</td>
+            <td></td>
+            <td></td>
+            <td id="total"></td>
+        </tr>
+
+    </table>
+
+    <div id="promoCode">Promo Code: <input type="text" id="disCode" size="15"></div>
+
+
+
+    <script>
+        var price = 0;
+        var totalT = 0;
+        var tax = 0;
+        var allTotal = 0;
+        $(document).ready(function() {
+            $.ajax({
+                type: "get",
+                url: "/s2019cst336/Practices/p6/api/getRandomProduct.php",
+                dataType: "json",
+                data: {
+
+                },
+                success: function(data, status) {
+                    var data = arguments[0];
+                    console.log(data);
+                    $("#itemName").html(data["product"]);
+                    price = data["price"];
+                    var q = data["qty"];
+
+                    $("#itemPrice").html("$" + data["price"]);
+
+                    $("#itemQty").val(data["qty"]);
+                    totalT = q * price;
+                    $("#totalPrice").html("$" + totalT);
+
+                    $("#subtotal").html("$" + totalT);
+                    tax = Math.floor(totalT * .10);
+
+                    $("#tax").html("$" + tax);
+                    allTotal = tax + totalT;
+                    $("#total").html("$" + allTotal);
+
+
+
+
+                },
+                complete: function(data, status) { //optional, used for debugging purposes
+                    //console.log(status);
+                }
+            });
+
+        });
+
+        $("#itemQty").on('input', function(e) {
+
+            totalT = $("#itemQty").val() * price;
+            $("#totalPrice").html("$" + totalT);
+            $("#subtotal").html("$" + totalT);
+            if ($("#disCode").val() != "") {
+                var discountedP = Math.floor(totalT * discount);
+                $("#discount").html(discountedP);
+                $("#subtotal").html("$" + (totalT - discountedP));
+                var ntotalT = totalT - discountedP;
+                tax = Math.floor(ntotalT * .10);
+                $("#tax").html("$" + tax);
+                allTotal = ntotalT + tax;
+                $("#total").html("$" + allTotal);
+            }
+            else {
+                tax = Math.floor(totalT * .10);
+                $("#tax").html("$" + tax);
+
+                allTotal = tax + totalT;
+                $("#total").html("$" + allTotal);
+            }
+            // subtotal= totalS+totalSan+totalT;
+            // tax= subtotal*.10;
+            // total= tax+subtotal+shipping;
+
+            // $("#subtotal").html("$"+subtotal);
+            //  $("#tax").html("$"+tax);
+            // $("#total").html("$"+total);
+
+        });
+        // var totalSan = 0;
+        // var totalS = 0;
+        // var subtotal = 0;
+        // var tax = 0;
+        // var total = 0;
+        // var shipping = 0;
+        var discount = 0;
+        $("#disCode").on("input", function(e) {
+            $.ajax({
+                type: "get",
+                url: "/s2019cst336/Practices/p6/api/applyPromoCode.php",
+                dataType: "json",
+                data: {
+                    "code": $("#disCode").val()
+                },
+                success: function(data, status) {
+                    console.log(data);
+
+                    discount = data;
+                    if (discount != 0) {
+                        $("#discountPerct").html(discount * 100 + "%");
+
+                        var discountedP = Math.floor(totalT * discount);
+                        $("#discount").html(discountedP);
+                        $("#subtotal").html("$" + (totalT - discountedP));
+                        var ntotalT = totalT - discountedP;
+                        tax = Math.floor(ntotalT * .10);
+                        $("#tax").html("$" + tax);
+                        allTotal = ntotalT + tax;
+                        $("#total").html("$" + allTotal);
+
+                    }
+                },
+                complete: function(data, status) { //optional, used for debugging purposes
+                    //console.log(status);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
