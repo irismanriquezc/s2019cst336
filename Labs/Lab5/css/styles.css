@@ -1,0 +1,53 @@
+body{
+    text-align:center;
+    background-color: #FBF279;
+}
+body input{
+    margin-bottom: 10px;
+}
+
+fieldset{
+    border:dashed;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+}
+
+legend{
+    font-family: 'Chonburi', cursive;
+    font-size: 22px;
+}
+
+h1{
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    letter-spacing: 9px;
+
+}
+label{
+    font-weight: 900;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 3px;
+
+}
+
+#suggested {
+    border:dashed;
+    margin: auto;
+    width: 200px;
+    padding: 3px;
+}
+#button {
+  font-family: 'Alegreya', serif;
+  font-size: 20px;
+  color: #fff;
+  letter-spacing: 3px;
+
+  background: #827af9;
+  padding: 12px 0 11px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  min-width: 120px;
+  overflow: hidden;
+
+}
