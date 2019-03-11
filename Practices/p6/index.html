@@ -70,7 +70,7 @@
         $(document).ready(function() {
             $.ajax({
                 type: "get",
-                url: "/s2019cst336/Practices/p6/api/getRandomProduct.php",
+                url: "./api/getRandomProduct.php",
                 dataType: "json",
                 data: {
 
@@ -147,7 +147,7 @@
         $("#disCode").on("input", function(e) {
             $.ajax({
                 type: "get",
-                url: "/s2019cst336/Practices/p6/api/applyPromoCode.php",
+                url: "./api/applyPromoCode.php",
                 dataType: "json",
                 data: {
                     "code": $("#disCode").val()
