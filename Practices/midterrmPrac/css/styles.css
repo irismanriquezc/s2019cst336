@@ -1,0 +1,30 @@
+body {
+    background-color: #c5d9f9;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: auto;
+}
+/*h1 {*/
+/*    color: grey;*/
+/*}*/
+tr {
+    border-style: dashed;
+}
+th {
+    text-align: left;
+    border: double;
+    border-color: #fbf279;
+}
+table {
+    border-style: dotted;
+    margin: auto;
+    padding: 10px;
+    width: 600px;
+}
+#promoCode {
+    padding-top: 20px;
+}
+/*button {*/
+/*    color: white;*/
+/*    background-color: #555555;*/
+/*}*/
