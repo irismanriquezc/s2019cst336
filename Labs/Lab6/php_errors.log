@@ -1,0 +1,117 @@
+[27-Mar-2019 19:34:29 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId, catName FROM om_category ORDER BY catName' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php(8): PDO->prepare('select * catId,...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 8
+[27-Mar-2019 19:35:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId, catName FROM om_category ORDER BY catName' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php(8): PDO->prepare('select * catId,...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 8
+[27-Mar-2019 19:36:07 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId, catName FROM om_category ORDER BY catName' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php(8): PDO->prepare('select * catId,...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 8
+[27-Mar-2019 19:36:55 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId, catName FROM om_category ORDER BY catName' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php(8): PDO->prepare('select * catId,...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 8
+[27-Mar-2019 19:37:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId, catName FROM om_category ORDER BY catName' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php(8): PDO->prepare('select * catId,...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 8
+[27-Mar-2019 19:37:58 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId, catName FROM om_category ORDER BY catName' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php(8): PDO->prepare('select * catId,...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 8
+[27-Mar-2019 19:38:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId, catName FROM om_category ORDER BY catName' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php(8): PDO->prepare('select * catId,...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 8
+[27-Mar-2019 19:39:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId, catName FROM om_category ORDER BY catName' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php(8): PDO->prepare('select * catId,...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 8
+[27-Mar-2019 19:39:46 UTC] PHP Warning:  include(./dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 2
+[27-Mar-2019 19:39:46 UTC] PHP Stack trace:
+[27-Mar-2019 19:39:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:0
+[27-Mar-2019 19:39:46 UTC] PHP Warning:  include(): Failed opening './dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 2
+[27-Mar-2019 19:39:46 UTC] PHP Stack trace:
+[27-Mar-2019 19:39:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:0
+[27-Mar-2019 19:39:46 UTC] PHP Fatal error:  Call to undefined function getDBConnection() in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 4
+[27-Mar-2019 19:39:46 UTC] PHP Stack trace:
+[27-Mar-2019 19:39:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:0
+[27-Mar-2019 19:42:02 UTC] PHP Warning:  include(./dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 2
+[27-Mar-2019 19:42:02 UTC] PHP Stack trace:
+[27-Mar-2019 19:42:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:0
+[27-Mar-2019 19:42:02 UTC] PHP Warning:  include(): Failed opening './dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 2
+[27-Mar-2019 19:42:02 UTC] PHP Stack trace:
+[27-Mar-2019 19:42:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:0
+[27-Mar-2019 19:42:02 UTC] PHP Fatal error:  Call to undefined function getDBConnection() in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 4
+[27-Mar-2019 19:42:02 UTC] PHP Stack trace:
+[27-Mar-2019 19:42:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:0
+[27-Mar-2019 19:42:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId, catName FROM om_category ORDER BY catName' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php(8): PDO->prepare('select * catId,...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 8
+[27-Mar-2019 19:44:24 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1096 No tables used' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php(8): PDO->prepare('select *')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getCategories.php on line 8
+[27-Mar-2019 20:05:07 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 19
+[27-Mar-2019 20:05:08 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 19
+[27-Mar-2019 20:05:08 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 19
+[27-Mar-2019 20:05:08 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 19
+[27-Mar-2019 20:05:08 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 19
+[27-Mar-2019 20:05:08 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 19
+[27-Mar-2019 20:05:08 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 19
+[27-Mar-2019 20:05:08 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 19
+[27-Mar-2019 20:05:09 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 19
+[27-Mar-2019 20:05:09 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 19
+[27-Mar-2019 20:05:40 UTC] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 19
+[27-Mar-2019 20:06:02 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 24
+[27-Mar-2019 20:06:02 UTC] PHP Stack trace:
+[27-Mar-2019 20:06:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php:0
+[27-Mar-2019 20:08:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'productName LIKE ?' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php:24
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php(24): PDO->prepare('SELECT * FROM o...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 24
+[27-Mar-2019 20:08:57 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'productName LIKE ?' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php:24
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php(24): PDO->prepare('SELECT * FROM o...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 24
+[27-Mar-2019 20:09:34 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'productName LIKE ?' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php:24
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php(24): PDO->prepare('SELECT * FROM o...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 24
+[27-Mar-2019 20:13:22 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'productName LIKE ?' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php:24
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php(24): PDO->prepare('SELECT * FROM o...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 24
+[27-Mar-2019 20:13:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'productName LIKE ?' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php:24
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php(24): PDO->prepare('SELECT * FROM o...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 24
+[27-Mar-2019 20:15:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'productName LIKE ?' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php:24
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php(24): PDO->prepare('SELECT * FROM o...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 24
+[27-Mar-2019 20:16:16 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'productName LIKE ?' at line 1' in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php:24
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php(24): PDO->prepare('SELECT * FROM o...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/api/getSearchResults.php on line 24

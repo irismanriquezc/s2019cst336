@@ -32,7 +32,7 @@
                 </select> </td>
             <td id="itemPrice2"></td>
             <td><input type="text" id="itemQty2" size="5"></td>
-            <td></td>
+            <td id= "totalP2"></td>
         </tr>
         <tr>
             <td>Discount</td>
@@ -65,13 +65,16 @@
     </table>
 
     <div id="promoCode">Promo Code: <input type="text" id="disCode" size="15"></div>
-
+    <div id= "exp" style="color:red"></div>
 
 
     <script>
         var priceRandom = 0;
         var priceDropdown = 0;
         var totalT = 0;
+        var total2=0;
+ 
+        var sub=0;
         var tax = 0;
         var allTotal = 0;
         $(document).ready(function() {
@@ -80,114 +83,117 @@
                 url: "./index.php",
                 dataType: "json",
                 data: {
-
                 },
                 success: function(data, status) {
-
-                    var data = arguments[0];
+                    data = arguments[0];
                     console.log(data);
-
                     var randInt = Math.floor((Math.random() * 18) + 1); // 1~18
                     console.log(data[randInt]["productName"]);
+                    
                     $("#itemName").html(data[randInt]["productName"]);
-
-                    price = data[randInt]["productPrice"];
+                    priceRandom = data[randInt]["productPrice"];
                     //var q = data["qty"];
-
-                    $("#itemPrice").html("$" + price);
-
+                    $("#itemPrice").html("$" + priceRandom);
                     // console.log($("#itemQty").val());
                     // totalT = q * priceRandom;
                     // $("#totalPrice").html("$" + totalT);
-
                     // $("#subtotal").html("$" + totalT);
                     // tax = Math.floor(totalT * .10);
-
                     // $("#tax").html("$" + tax);
                     // allTotal = tax + totalT;
                     // $("#total").html("$" + allTotal);
+                    console.log(data);
 
                     for (var i = 0; i < data.length; i++) {
-                        var o = new Option(data[i]["productName"], i + 1);
+                        var o = new Option(data[i]["productName"], i);
                         $(o).html(data[i]["productName"] + " ($" + data[i]["productPrice"] + ")");
                         $("#productMenu").append(o);
                     }
-
                 },
                 complete: function(data, status) { //optional, used for debugging purposes
                     //console.log(status);
                 }
             });
-
         });
 
         $("#productMenu").on('change', function(e) {
             console.log(this.value);
             var productTempName = $("#productMenu option:selected").text();
-            console.log("Selected Product Name --->  ", productTempName);
+            // console.log("Selected Product Name --->  ", productTempName);
             var productTempVal = $("#productMenu option:selected").val();
-            if (productTempVal == 0) {
-                console.log("Can't get a price of 0");
-                $("#itemQty2").val('');
-            }
-            else {
+            // if (productTempVal == 0) {
+            //     console.log("Can't get a price of 0");
+            //     $("#itemQty2").val('');
+            // }
+            // else {
                 //Upate the price for the product selected from dropdown menu
-                console.log($("#productMenu option:selected").text());
+                // console.log($("#productMenu option:selected").text());
                 var str = $("#productMenu option:selected").text();
                 var mySubString = str.substring(
-                    str.lastIndexOf("(") + 1,
+                    str.lastIndexOf("(") + 2,
                     str.lastIndexOf(")")
                 );
+                priceDropdown=parseFloat(mySubString); 
                 $("#itemQty2").val(0);
-                $("#itemPrice2").html(mySubString);
-            }
-
-
+                $("#itemPrice2").html("$"+mySubString);
+            
         });
-
+        
+        
         $("#itemQty").on('input', function(e) {
-
-            totalT = $("#itemQty").val() * price;
-
+            totalT = $("#itemQty").val() * priceRandom;
+            totalT=Math.floor(totalT);
             $("#totalPrice").html("$" + totalT);
-
-            $("#subtotal").html("$" + totalT);
-
-            if ($("#disCode").val() != "") {
-
-                var discountedP = Math.floor(totalT * discount);
-
-                $("#discount").html(discountedP);
-
-                $("#subtotal").html("$" + (totalT - discountedP));
-
-                var ntotalT = totalT - discountedP;
-
-                tax = Math.floor(ntotalT * .10);
-
-                $("#tax").html("$" + tax);
-
-                allTotal = ntotalT + tax;
-
-                $("#total").html("$" + allTotal);
-            }
-            else {
-                tax = Math.floor(totalT * .10);
-
-                $("#tax").html("$" + tax);
-
-                allTotal = tax + totalT;
-
-                $("#total").html("$" + allTotal);
-            }
+            sub+=totalT;
+             $("#subtotal").html("$" + sub);
+                // if ($("#disCode").val() != "") {
+                //     var discountedP = Math.floor(totalT * discount);
+                //     $("#discount").html(discountedP);
+                //     $("#subtotal").html("$" + (totalT - discountedP));
+                //     var ntotalT = totalT - discountedP;
+                //     tax = Math.floor(ntotalT * .10);
+                //     $("#tax").html("$" + tax);
+                //     allTotal = ntotalT + tax;
+                //     $("#total").html("$" + allTotal);
+                // }
+                // else {
+                    tax = Math.floor(sub * .10);
+                    $("#tax").html("$" + tax);
+                    allTotal = tax + sub;
+                    $("#total").html("$" + allTotal);
+                
             // subtotal= totalS+totalSan+totalT;
             // tax= subtotal*.10;
             // total= tax+subtotal+shipping;
-
             // $("#subtotal").html("$"+subtotal);
             //  $("#tax").html("$"+tax);
             // $("#total").html("$"+total);
+        });
+        
+         $("#itemQty2").on('input', function(e) {
+            total2 = $("#itemQty2").val() * priceDropdown;
+            total2=Math.floor(total2);
 
+            $("#totalP2").html("$" + total2);
+            sub+=total2;
+             $("#subtotal").html("$" + sub);
+            // if ($("#disCode").val() != "") {
+            //     var discountedP = Math.floor(total2 * discount);
+            //     $("#discount").html(discountedP);
+            //     $("#subtotal").html("$" + (total2 - discountedP));
+            //     var ntotalT = total2 - discountedP;
+            //     tax = Math.floor(ntotal2 * .10);
+            //     $("#tax").html("$" + tax);
+            //     allTotal = ntotal2 + tax;
+            //     $("#total").html("$" + allTotal);
+            // }
+            // else {
+                tax = Math.floor(sub * .10);
+                $("#tax").html("$" + tax);
+                allTotal = tax + sub;
+                $("#total").html("$" + allTotal);
+            
+           
         });
         // var totalSan = 0;
         // var totalS = 0;
@@ -199,28 +205,33 @@
         $("#disCode").on("input", function(e) {
             $.ajax({
                 type: "get",
-                url: "./api/applyPromoCode.php",
+                url: "./codes.php",
                 dataType: "json",
                 data: {
-                    "code": $("#disCode").val()
+                         "code": $("#disCode").val()
                 },
                 success: function(data, status) {
                     console.log(data);
-
-                    discount = data;
-                    if (discount != 0) {
-                        $("#discountPerct").html(discount * 100 + "%");
-
-                        var discountedP = Math.floor(totalT * discount);
-                        $("#discount").html(discountedP);
-                        $("#subtotal").html("$" + (totalT - discountedP));
-                        var ntotalT = totalT - discountedP;
+                    console.log( $("#disCode").val());
+                     
+                     for (var i = 0; i < data.length; i++) {
+                       
+                        if($("#disCode").val()== data[i]["promoCode"]){
+                         discount= data[i]["discount"]*.01;
+                         console.log(discount);
+                         var discountedP = Math.floor(sub * discount);
+                         $("#discount").html("$"+discountedP);  
+                          var ntotalT = sub - discountedP;
+                         $("#subtotal").html("$" + ntotalT);
+                       
                         tax = Math.floor(ntotalT * .10);
                         $("#tax").html("$" + tax);
                         allTotal = ntotalT + tax;
                         $("#total").html("$" + allTotal);
-
+                        $("#exp").html("This promo code expires on "+ data[i]["expirationDate"]+"!");
+                        }
                     }
+                    
                 },
                 complete: function(data, status) { //optional, used for debugging purposes
                     //console.log(status);
