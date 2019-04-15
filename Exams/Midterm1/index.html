@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Match @ Cinder.com</title>
+    </head>
+    <body>
+      <div id="content">
+      </div>
+      <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+      </script>
+      
+      
+       <nav>
+            <hr width= 50%/>
+            <a  href = "index.html">Match</a>
+            <a  href = "history.html">History</a>
+        </nav>
+        
+        <div id="info">
+            <h2>Match</h2>
+            <div id="img"></div> 
+        </div>
+      <button id="dislike">Dislike</button>
+      <button id="ques">?</button>
+
+      <button id="like">Like</button>
+      
+
+      
+      <script>
+      var unav=[];
+      var available=[];
+      var disliked = [ ];
+      var liked= [ ];
+    $(document).ready(function() {
+        
+//          $.ajax({
+//                 type: "get",
+//                 url: "./match.php",
+//                 dataType: "json",
+//                 data: {
+//                 },
+// //                 about_me: "rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh"
+//                 // email_address: "ssivillc@globo.com"
+//                 // id: 13
+//                 // picture_url: "http://dummyimage.com/600x600.png/dddddd/000000"
+//                 // username: "lsilverstonc
+//                 success: function(data, status) {
+//                   for(var i=0;i<data.length;i++){
+//                       if(data[i]["user_id"]==1){
+//                           unav.push(data[i]["matched"])
+//                       }
+//                   }
+//                 },
+//             complete: function(data, status) { //optional, used for debugging purposes
+//                     //console.log(status);
+//                 }
+        
+//                 });
+        
+            $.ajax({
+                type: "get",
+                url: "./getData.php",
+                dataType: "json",
+                data: {
+                },
+//                 about_me: "rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh"
+                // email_address: "ssivillc@globo.com"
+                // id: 13
+                // picture_url: "http://dummyimage.com/600x600.png/dddddd/000000"
+                // username: "lsilverstonc
+                success: function(data, status) {
+                    // console.log(data);
+                var randInt = Math.floor((Math.random() * 20)+1 );
+                   $("#info").html(data[randInt]["about_me"]);
+                    $('#info').append('<br>');
+                    
+                   var im= data[randInt]["picture_url"];
+                   $('#info').prepend('<img src="'+im+'"/>');
+                    
+                    $("#dislike").on("click", function(e) {
+                        
+                        disliked.push(data[randInt]["id"]);
+                        var r = Math.floor((Math.random() * 20)+1 );
+                         $("#info").html(data[r]["about_me"]);
+                         $('#info').append('<br>');
+                    
+                           var im= data[r]["picture_url"];
+                           $('#info').prepend('<img src="'+im+'"/>');
+                     });
+                     
+                    $("#like").on("click", function(e) {
+                        liked.push(data[randInt]["id"]);
+                        var t = Math.floor((Math.random() * 20)+1 );
+                         $("#info").html(data[t]["about_me"]);
+                         $('#info').append('<br>');
+                    
+                           var im= data[randInt]["picture_url"];
+                           $('#info').prepend('<img src="'+im+'"/>');
+                        
+                     });
+                 
+                  
+                 
+                },
+                complete: function(data, status) { //optional, used for debugging purposes
+                    //console.log(status);
+                }
+            });
+            
+
+        });
+            
+       
+      </script>
+      
+      
+      
+      
+      
+      
+    </body>
+    
+        <h3 class="mume-header" id="rubric">Rubric</h3>
+    
+      <table>
+        <thead>
+        <tr>
+        <th style="text-align:left">#</th>
+        <th style="text-align:left">Task Description</th>
+        <th style="text-align:left">Points</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr style="color:green">
+        <td style="text-align:left">1</td>
+        <td style="text-align:left" >Active potential matches are pulled from MySQL using AJAX and a PHP API endpoint, and provides unmatched users, and is displayed using the specified page design</td>
+        <td style="text-align:left">40</td>
+        </tr>
+        <tr style="color:green">
+        <td style="text-align:left">2</td>
+        <td style="text-align:left">The match history is pulled from MySQL using AJAX and a PHP API endpoint, and provides the data for all matches, whether or not there is history, and is displayed using the specified page design</td>
+        <td style="text-align:left">40</td>
+        </tr>
+        <tr>
+        <td style="text-align:left">3</td>
+        <td style="text-align:left">The information modal is popped up with the "About Me" information for the match</td>
+        <td style="text-align:left">20</td>
+        </tr>
+        <tr>
+        <td style="text-align:left"></td>
+        <td style="text-align:left">TOTAL</td>
+        <td style="text-align:left">100</td>
+        </tr>
+        <tr>
+        <td style="text-align:left"></td>
+        <td style="text-align:left">This rubric is properly included AND UPDATED (BONUS)</td>
+        <td style="text-align:left">2</td>
+        </tr>
+        <tr>
+        <td style="text-align:left">BD</td>
+        <td style="text-align:left">A separate report that shows the number of matches by category is available from navigation and shows the correct numbers, and is cleanly formatted</td>
+        <td style="text-align:left">15</td>
+        </tr>
+        <tr>
+        <td style="text-align:left">BD</td>
+        <td style="text-align:left">After all potential matches have been displayed, the buttons are disabled and a message is displayed; once the message has been closed the user is navigated to the history page</td>
+        <td style="text-align:left">15</td>
+        </tr>
+        <tr>
+        <td style="text-align:left">BD</td>
+        <td style="text-align:left">The relative time is displayed in the history page instead of actual date and time</td>
+        <td style="text-align:left">10</td>
+        </tr>
+        <tr>
+        <td style="text-align:left">BD</td>
+        <td style="text-align:left">Users who liked the current user are pulled from MySQL using AJAX and a PHP API endpoint, and are displayed using the specified page design</td>
+        <td style="text-align:left">15</td>
+        </tr>
+        </tbody>
+        </table>
+</html>

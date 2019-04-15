@@ -1,7 +1,7 @@
 <?php
     function getDBConnection(){
         $host = "localhost";
-        $dbName = "ottermart";
+        $dbName = "cinder";
         $user = "irismanriquezc";
         $pass = "";
         $dsn = "mysql:host=$host;dbname=$dbName";
@@ -13,16 +13,6 @@
            PDO::ATTR_DEFAULT_FETCH_MODE=> PDO::FETCH_ASSOC,
            PDO::ATTR_EMULATE_PREPARES => false,
            ];
-           
-             if  (strpos($_SERVER['HTTP_HOST'], 'herokuapp') !== false) {
-                $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-                $host = $url["host"];
-                $dbname = substr($url["path"], 1);
-                $username = $url["user"];
-                $password = $url["pass"];
-            } 
-    
-
            
           $pdo = new PDO($dsn,$user,$pass, $opt);
           

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Match @ Cinder.com</title>
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+      </script>
+    </head>
+    <body>
+        <nav>
+            <hr width= 50%/>
+            <a  href = "index.html">Match</a>
+            <a  href = "history.html">History</a>
+        </nav>
+        <h1> History </h1>
+        <table id= "table1">
+        <tr>
+            <th> Username</th>
+            <th>  Status</th>
+            <th>  When</th>
+        </tr>
+        <tr >
+            
+        </tr>
+        </table>
+    </body>
+    <script >
+    var matched=[];
+    var stas= [];
+    var dates =[];
+        $(document).ready(function() {
+            $.ajax({
+                type: "get",
+                url: "./matching.php",
+                dataType: "json",
+                data: {
+                },
+                // 0: {user_id: 1, match_user_id: 2, answer_timestamp: "2019-03-27 19:48:51", answer_type_id: 1}
+                success: function(data, status) {
+                   console.log(data);
+                    for( var i = 0; i<data.length ; i++){
+                        if(data[i]["user_id"]==1){
+                            
+                            matched.push(data[i]["match_user_id"]);
+                            stas.push(data[i]["answer_type_id"]);
+                            dates.push(data[i]["answer_timestamp"]);
+                        }
+                        
+                        
+                    }
+                    
+                },
+                complete: function(data, status) { //optional, used for debugging purposes
+                    //console.log(status);
+                }
+            });
+            
+            $.ajax({
+                type: "get",
+                url: "./getData.php",
+                dataType: "json",
+                data: {
+                },
+                // 0: {user_id: 1, match_user_id: 2, answer_timestamp: "2019-03-27 19:48:51", answer_type_id: 1}
+                success: function(data, status) {
+                   console.log(data);
+                    
+                    for( var i = 1; i<data.length ; i++){
+                        $('#table1').append('<tr><td>'+data[i]["username"]+'</td> </tr>');
+                    }
+                    
+                    
+                    
+                    
+                    
+                        // $('#table1').append('<tr class="child"><td>'+data[i]["username"]+'</td></tr>');
+                        // $('#table1').append('<br>');
+                        // $('#table1').append([
+                        //             '<tr>',
+                        //         <td>data[i]["username"]'</td>',
+                                
+                        //     '</tr>'
+                        //     ].join(''));
+                        // $('#table1 tr:last').after('<tr id ="stats"></tr>');
+                        // $('#stats').append( $('<th />', {text : data[i]["username"]}) )
+ 
+                    
+                    // console.log(data);
+                    
+                   
+                    
+                  
+                 
+                },
+                complete: function(data, status) { //optional, used for debugging purposes
+                    //console.log(status);
+                }
+            });
+            
+
+        });
+    </script>
+</html>
