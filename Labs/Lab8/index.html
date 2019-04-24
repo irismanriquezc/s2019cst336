@@ -1,0 +1,205 @@
+<html>
+    <head>
+        <title> Favorite Images</title>
+        <!--<link rel="stylesheet" href="css/styles.css" type="text/css" />-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!--Your API key: 12276108-81c1898a3fc548ca2b29766b4-->
+    <!--https://pixabay.com/api/?key=12276108-81c1898a3fc548ca2b29766b4&q=yellow+flowers&image_type=photo&pretty=true-->
+
+    </head>
+    <body>
+        <label >Give Keyword to Find Pictures</label>
+        <br>
+        <br>
+        <input id="picDes" type="text" name="searchPic"/>
+        
+        <button id="submit" type="button">Search</button>
+        <div id="tableDiv">
+        <table style="width:100%">
+      <tr>
+         <td id="pictureSpot1"></td>
+        <td id="pictureSpot2"></td> 
+        <td id="pictureSpot3"></td>
+      </tr>
+      <tr>
+        <td id="pictureSpot4"></td>
+        <td id="pictureSpot5"></td> 
+        <td id="pictureSpot6"></td>
+      </tr>
+      <tr>
+        <td id="pictureSpot7"></td>
+        <td id="pictureSpot8"></td> 
+        <td id="pictureSpot9"></td>
+      </tr>
+    </table>
+    </div>
+        <script>
+               function myFunction( param) {
+                   param= param.replace(" ", "+");
+                   console.log(param);
+                    return param;
+                }
+
+        //   var link= $("#picDes").val();
+        //   console.log(link);
+           $( "#submit" ).click(function() {
+                  var link= $("#picDes").val();
+       
+
+            link = myFunction(link);
+            var finalLink ="https://pixabay.com/api/?key=12276108-81c1898a3fc548ca2b29766b4&q="+link+"&image_type=photo&pretty=true";
+            console.log(finalLink);
+            
+                 $.ajax({
+                type: "get",
+                url: finalLink,
+                dataType: "json",
+                
+                success: function(data, status) {
+                    if(data["totalHits"]==0){
+                     $("#tableDiv").append("NO RESULTS");
+                    }
+                    // console.log(data["totalHits"]);
+                     console.log(data["hits"][0]);
+                     var imgLink= data["hits"][0]["webformatURL"];
+                    //  $('#pictureSpot1').prepend('<img id="theImg" src='+imgLink +'/>');
+                    var likeHeart= "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png";
+                    for(var i=0;i<9;i++){
+                        var imgLink= data["hits"][i]["webformatURL"];
+                        $('#pictureSpot'+(i+1)).html('<img id="mainImage" src='+imgLink +'height="350" width="350"/>');
+                        $('#pictureSpot'+(i+1)).prepend('<img id="theImg'+i+'" src="'+likeHeart +'" />');
+                        
+                   
+                        
+                    }
+                        
+                    function imageDisplay(parameter){
+                        console.log(parameter);
+                    }
+                    
+                    
+                    
+                
+                    $("#theImg0").click(function(){
+                        console.log("clicked");
+                    if (document.getElementById("theImg0").src == "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png") 
+                    {
+                        document.getElementById("theImg0").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite-on.png";
+                    }
+                    else 
+                    {
+                        document.getElementById("theImg0").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png";
+                    }
+                    
+                    })
+                        
+                     $("#theImg1").click(function(){
+                    if (document.getElementById("theImg1").src == "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png") 
+                    {
+                        document.getElementById("theImg1").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite-on.png";
+                    }
+                    else 
+                    {
+                        document.getElementById("theImg1").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png";
+                    }
+                    
+                    })
+                        
+                     $("#theImg2").click(function(){
+                    if (document.getElementById("theImg2").src == "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png") 
+                    {
+                        document.getElementById("theImg2").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite-on.png";
+                    }
+                    else 
+                    {
+                        document.getElementById("theImg2").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png";
+                    }
+                    
+                    })
+                
+                     $("#theImg3").click(function(){
+                    if (document.getElementById("theImg3").src == "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png") 
+                    {
+                        document.getElementById("theImg3").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite-on.png";
+                    }
+                    else 
+                    {
+                        document.getElementById("theImg3").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png";
+                    }
+                    
+                    })
+                    
+                     $("#theImg4").click(function(){
+                    if (document.getElementById("theImg4").src == "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png") 
+                    {
+                        document.getElementById("theImg4").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite-on.png";
+                    }
+                    else 
+                    {
+                        document.getElementById("theImg4").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png";
+                    }
+                    
+                    })
+                    
+                     $("#theImg5").click(function(){
+                    if (document.getElementById("theImg5").src == "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png") 
+                    {
+                        document.getElementById("theImg5").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite-on.png";
+                    }
+                    else 
+                    {
+                        document.getElementById("theImg5").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png";
+                    }
+                    
+                    })
+                    
+                     $("#theImg6").click(function(){
+                    if (document.getElementById("theImg6").src == "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png") 
+                    {
+                        document.getElementById("theImg6").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite-on.png";
+                    }
+                    else 
+                    {
+                        document.getElementById("theImg6").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png";
+                    }
+                    
+                    })
+                    
+                     $("#theImg7").click(function(){
+                    if (document.getElementById("theImg7").src == "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png") 
+                    {
+                        document.getElementById("theImg7").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite-on.png";
+                    }
+                    else 
+                    {
+                        document.getElementById("theImg7").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png";
+                    }
+                    
+                    })
+                    
+                     $("#theImg8").click(function(){
+                    if (document.getElementById("theImg8").src == "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png") 
+                    {
+                        document.getElementById("theImg8").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite-on.png";
+                    }
+                    else 
+                    {
+                        document.getElementById("theImg8").src = "https://simple.showdeolabs.com/csumb/scd/classes/336/assignments/labs/8/assets/favorite.png";
+                    }
+                    
+                    })
+                },
+                complete: function(data, status) { //optional, used for debugging purposes
+                    //console.log(status);
+                }
+            });
+            
+            });
+            
+        
+        </script>
+        
+        
+        
+    </body>
+</html>
