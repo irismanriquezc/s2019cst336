@@ -3,3 +3,6 @@ Stack trace:
 #0 /home/ubuntu/workspace/s2019cst336/Labs/Lab6/getCategories.php(8): PDO->prepare('select * catId,...')
 #1 {main}
   thrown in /home/ubuntu/workspace/s2019cst336/Labs/Lab6/getCategories.php on line 8
+[03-May-2019 00:32:38 UTC] PHP Warning:  Division by zero in /home/ubuntu/workspace/s2019cst336/Labs/Lab7/logout.php on line 6
+[03-May-2019 00:32:38 UTC] PHP Stack trace:
+[03-May-2019 00:32:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/Labs/Lab7/logout.php:0

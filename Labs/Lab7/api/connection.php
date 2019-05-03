@@ -1,7 +1,7 @@
 <?php
     function getDBConnection(){
         $host = "localhost";
-        $dbName = "favoritesSearch";//the database I want
+        $dbName = "ottermart";//the database I want
         $user = "irismanriquezc";
         $pass = "";
         $dsn = "mysql:host=$host;dbname=$dbName";

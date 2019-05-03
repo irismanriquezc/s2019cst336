@@ -1,0 +1,6 @@
+[02-May-2019 23:35:49 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/s2019cst336/Labs/Lab7/api/addProducts.php on line 4
+[02-May-2019 23:35:49 UTC] PHP Stack trace:
+[02-May-2019 23:35:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/Labs/Lab7/api/addProducts.php:0
+[02-May-2019 23:37:54 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/s2019cst336/Labs/Lab7/api/addProducts.php on line 4
+[02-May-2019 23:37:54 UTC] PHP Stack trace:
+[02-May-2019 23:37:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/Labs/Lab7/api/addProducts.php:0
