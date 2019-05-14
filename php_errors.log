@@ -1,1 +1,156 @@
 [26-Feb-2019 00:48:41 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/ubuntu/workspace/s2019cst336/Examples/basic.php on line 13
+[13-May-2019 03:16:15 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId, catName FROM om_category ORDER BY catName' at line 1' in /home/ubuntu/workspace/s2019cst336/final/putData.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/final/putData.php(8): PDO->prepare('select * catId,...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/final/putData.php on line 8
+[13-May-2019 03:19:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId, catName FROM om_category ORDER BY catName' at line 1' in /home/ubuntu/workspace/s2019cst336/final/putData.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/final/putData.php(8): PDO->prepare('select * catId,...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/final/putData.php on line 8
+[13-May-2019 03:38:05 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId, catName FROM om_category ORDER BY catName' at line 1' in /home/ubuntu/workspace/s2019cst336/final/putData.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/final/putData.php(8): PDO->prepare('select * catId,...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/final/putData.php on line 8
+[13-May-2019 03:40:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId, catName FROM om_category ORDER BY catName' at line 1' in /home/ubuntu/workspace/s2019cst336/final/putData.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/final/putData.php(8): PDO->prepare('select * catId,...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/final/putData.php on line 8
+[13-May-2019 03:40:27 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'catId, catName FROM om_category ORDER BY catName' at line 1' in /home/ubuntu/workspace/s2019cst336/final/putData.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/final/putData.php(8): PDO->prepare('select * catId,...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/final/putData.php on line 8
+[13-May-2019 21:03:29 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:03:29 UTC] PHP Stack trace:
+[13-May-2019 21:03:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:03:29 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:03:29 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:03:29 UTC] PHP Stack trace:
+[13-May-2019 21:03:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:03:29 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:03:29 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 9
+[13-May-2019 21:03:29 UTC] PHP Stack trace:
+[13-May-2019 21:03:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:03:29 UTC] PHP   2. mysql_fetch_array() /home/ubuntu/workspace/s2019cst336/final/getData.php:9
+[13-May-2019 21:04:43 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:04:43 UTC] PHP Stack trace:
+[13-May-2019 21:04:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:04:43 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:04:43 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:04:43 UTC] PHP Stack trace:
+[13-May-2019 21:04:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:04:43 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:04:43 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 9
+[13-May-2019 21:04:43 UTC] PHP Stack trace:
+[13-May-2019 21:04:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:04:43 UTC] PHP   2. mysql_fetch_array() /home/ubuntu/workspace/s2019cst336/final/getData.php:9
+[13-May-2019 21:06:55 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:06:55 UTC] PHP Stack trace:
+[13-May-2019 21:06:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:06:55 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:06:55 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:06:55 UTC] PHP Stack trace:
+[13-May-2019 21:06:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:06:55 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:06:55 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 11
+[13-May-2019 21:06:55 UTC] PHP Stack trace:
+[13-May-2019 21:06:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:06:55 UTC] PHP   2. mysql_fetch_array() /home/ubuntu/workspace/s2019cst336/final/getData.php:11
+[13-May-2019 21:07:05 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:07:05 UTC] PHP Stack trace:
+[13-May-2019 21:07:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:07:05 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:07:05 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:07:05 UTC] PHP Stack trace:
+[13-May-2019 21:07:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:07:05 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:07:05 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 11
+[13-May-2019 21:07:05 UTC] PHP Stack trace:
+[13-May-2019 21:07:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:07:05 UTC] PHP   2. mysql_fetch_array() /home/ubuntu/workspace/s2019cst336/final/getData.php:11
+[13-May-2019 21:07:19 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:07:19 UTC] PHP Stack trace:
+[13-May-2019 21:07:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:07:19 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:07:19 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:07:19 UTC] PHP Stack trace:
+[13-May-2019 21:07:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:07:19 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:07:19 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 11
+[13-May-2019 21:07:19 UTC] PHP Stack trace:
+[13-May-2019 21:07:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:07:19 UTC] PHP   2. mysql_fetch_array() /home/ubuntu/workspace/s2019cst336/final/getData.php:11
+[13-May-2019 21:07:41 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:07:41 UTC] PHP Stack trace:
+[13-May-2019 21:07:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:07:41 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:07:41 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:07:41 UTC] PHP Stack trace:
+[13-May-2019 21:07:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:07:41 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:07:41 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 11
+[13-May-2019 21:07:41 UTC] PHP Stack trace:
+[13-May-2019 21:07:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:07:41 UTC] PHP   2. mysql_fetch_array() /home/ubuntu/workspace/s2019cst336/final/getData.php:11
+[13-May-2019 21:10:20 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:10:20 UTC] PHP Stack trace:
+[13-May-2019 21:10:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:10:20 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:10:20 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:10:20 UTC] PHP Stack trace:
+[13-May-2019 21:10:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:10:20 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:10:20 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 11
+[13-May-2019 21:10:20 UTC] PHP Stack trace:
+[13-May-2019 21:10:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:10:20 UTC] PHP   2. mysql_fetch_array() /home/ubuntu/workspace/s2019cst336/final/getData.php:11
+[13-May-2019 21:13:48 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 9
+[13-May-2019 21:13:48 UTC] PHP Stack trace:
+[13-May-2019 21:13:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:14:20 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 6
+[13-May-2019 21:14:20 UTC] PHP Stack trace:
+[13-May-2019 21:14:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:14:26 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 6
+[13-May-2019 21:14:26 UTC] PHP Stack trace:
+[13-May-2019 21:14:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:18:02 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:18:02 UTC] PHP Stack trace:
+[13-May-2019 21:18:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:18:02 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:18:02 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 7
+[13-May-2019 21:18:02 UTC] PHP Stack trace:
+[13-May-2019 21:18:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:18:02 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:7
+[13-May-2019 21:18:02 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 9
+[13-May-2019 21:18:02 UTC] PHP Stack trace:
+[13-May-2019 21:18:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:18:02 UTC] PHP   2. mysql_fetch_array() /home/ubuntu/workspace/s2019cst336/final/getData.php:9
+[13-May-2019 21:21:31 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 8
+[13-May-2019 21:21:31 UTC] PHP Stack trace:
+[13-May-2019 21:21:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:21:31 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:8
+[13-May-2019 21:21:31 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 8
+[13-May-2019 21:21:31 UTC] PHP Stack trace:
+[13-May-2019 21:21:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:21:31 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:8
+[13-May-2019 21:21:31 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, boolean given in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 11
+[13-May-2019 21:21:31 UTC] PHP Stack trace:
+[13-May-2019 21:21:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:21:31 UTC] PHP   2. mysql_fetch_array() /home/ubuntu/workspace/s2019cst336/final/getData.php:11
+[13-May-2019 21:22:35 UTC] PHP Warning:  mysql_query(): Access denied for user ''@'localhost' (using password: NO) in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 8
+[13-May-2019 21:22:35 UTC] PHP Stack trace:
+[13-May-2019 21:22:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:22:35 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:8
+[13-May-2019 21:22:35 UTC] PHP Warning:  mysql_query(): A link to the server could not be established in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 8
+[13-May-2019 21:22:35 UTC] PHP Stack trace:
+[13-May-2019 21:22:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/s2019cst336/final/getData.php:0
+[13-May-2019 21:22:35 UTC] PHP   2. mysql_query() /home/ubuntu/workspace/s2019cst336/final/getData.php:8
+[13-May-2019 21:30:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'from appt_slots' at line 1' in /home/ubuntu/workspace/s2019cst336/final/getData.php:8
+Stack trace:
+#0 /home/ubuntu/workspace/s2019cst336/final/getData.php(8): PDO->prepare('SELECT from app...')
+#1 {main}
+  thrown in /home/ubuntu/workspace/s2019cst336/final/getData.php on line 8
