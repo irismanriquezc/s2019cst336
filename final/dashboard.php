@@ -35,7 +35,12 @@ session_start();
     <h1>Schedule Page</h1>
     
   
+  <div id="link">        
+  <label for="sTime">Link: </label><input  value=https://s2019cst336-irismanriquezc.c9users.io/s2019cst336/final/dashboard.php# id="linkT" type="text" name="linkC" >
+  <button onClick="copyT()">Copy text</button>
+
   
+</div>
     
 
     <div id="addSlot" class="modal">
@@ -96,6 +101,17 @@ session_start();
 </div>
 
     <script>
+    function copyT() {
+        
+  /* Get the text field */
+  var copyText = document.getElementById("linkT");
+
+  /* Select the text field */
+  copyText.select();
+
+  document.execCommand("copy");
+
+}
     function onSignIn(googleUser) {
       
     var profile = googleUser.getBasicProfile();
@@ -418,27 +434,35 @@ session_start();
 <td style="text-align:left">Add Google Signin for app login</td>
 <td style="text-align:left">10</td>
 </tr>
-<tr>
+    <tr style="color:red;">
 <td style="text-align:left">BD</td>
 <td style="text-align:left">The app is deployed to Heroku</td>
 <td style="text-align:left">15</td>
 </tr>
 <tr>
+    <tr style="color:red;">
+
 <td style="text-align:left">BD</td>
 <td style="text-align:left">A banner file can be uploaded and displayed</td>
 <td style="text-align:left">20</td>
 </tr>
 <tr>
+    <tr style="color:red;">
+
 <td style="text-align:left">BD</td>
 <td style="text-align:left">The user can add multiple available time slots as specified</td>
 <td style="text-align:left">10</td>
 </tr>
 <tr>
+    <tr style="color:red;">
+
 <td style="text-align:left">BD</td>
 <td style="text-align:left">In a separate page, you show the correct list of available time slots to the user who navigates to the correct invitation URL</td>
 <td style="text-align:left">10</td>
 </tr>
 <tr>
+    <tr style="color:red;">
+
 <td style="text-align:left">BD</td>
 <td style="text-align:left">You correctly implement booking of the appointement, including all side effects</td>
 <td style="text-align:left">30</td>
